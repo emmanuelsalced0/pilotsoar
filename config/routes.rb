@@ -6,9 +6,9 @@ Rails.application.routes.draw do
 
   get "/home", to: "posts#home", as: "home"
   get "new" => 'posts#new'
-  get "pricing" => 'pages#pricing'
   get "contact_us" => 'pages#contact_us'
+  get "/jackie", to: "posts#index", as: "jackie"
 
-  match 'jackie', to: 'posts#index', via: :all
+  
 
 end
