@@ -1,0 +1,25 @@
+
+<section class="no-padding" id="portfolio">
+    <div class="bg-dark">
+        <div class="row no-gutter">
+                <% @posts.each do |post| %>
+                    <div class="col-lg-4 col-sm-6">
+                        <a><%= link_to post_path(post), class: 'portfolio-box' do %>
+                            <%= image_tag (post.image), class: 'img-responsive portfolio-item' %>
+                             <div class="portfolio-box-caption">
+                                <div class="portfolio-box-caption-content">
+                                    <div class="project-category text-faded">
+                                    Jackie
+                                    </div>
+                                <div class="project-name">
+                                    <%= post.title%>
+                                </div>
+                            </div>
+                        </div>
+                         <% end %></a>
+                    </div>
+                <% end %>
+
+        </div>
+    </div>
+</section>
